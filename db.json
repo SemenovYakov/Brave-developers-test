@@ -1,0 +1,19 @@
+{
+    "operators": [
+        {
+            "id": "MTC",
+            "name": "MTC",
+            "link_image": "https://vernuti-tovar.ru/wp-content/uploads/2017/12/mts-1024x576.png"
+        },
+        {
+            "id": "Beeline",
+            "name": "Beeline",
+            "link_image": "https://my-obzor.com/wp-content/uploads/2019/04/bilajn.png"
+        },
+        {
+            "id": "Megafon",
+            "name": "Megafon",
+            "link_image": "https://pbs.twimg.com/media/E-2bgMzXEAELMxh.jpg"
+        }
+    ]
+}
