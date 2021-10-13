@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "serve": "concurrently \"npm run dev\" \"npm run json-server\"",
-    "json-server": "json-server -w ./db.json -p 4200"
+    "json-server": "json-server -w ./db.json -p 4200",
+    "server": "node server.js"
   },
   "dependencies": {
     "next": "11.1.2",
