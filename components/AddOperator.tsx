@@ -10,7 +10,7 @@ const AddOperator = () => {
 
   const Submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await fetch("   ", {
+    await fetch("https://brave-developers-test-task.herokuapp.com/operators", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

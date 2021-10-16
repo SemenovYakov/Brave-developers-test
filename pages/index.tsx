@@ -44,7 +44,7 @@ const Home = ({ operators }: IOperatorsADD) => {
 export default Home;
 
 Home.getInitialProps = async () => {
-  const response = await fetch("");
+  const response = await fetch("https://brave-developers-test-task.herokuapp.com/operators");
   const operators: IOperator[] = await response.json();
   return { operators };
 };
