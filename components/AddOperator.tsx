@@ -10,7 +10,7 @@ const AddOperator = () => {
 
   const Submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await fetch("http://localhost:4200/operators", {
+    await fetch("   ", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

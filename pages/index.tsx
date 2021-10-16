@@ -44,7 +44,7 @@ const Home = ({ operators }: IOperatorsADD) => {
 export default Home;
 
 Home.getInitialProps = async () => {
-  const response = await fetch("http://localhost:4200/operators");
+  const response = await fetch("");
   const operators: IOperator[] = await response.json();
   return { operators };
 };
