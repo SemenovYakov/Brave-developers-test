@@ -3,6 +3,7 @@ import { IOperator } from "../components/types";
 import { useRouter } from "next/dist/client/router";
 import Operator from "../components/Operator";
 
+
 interface IOperatorsADD {
   operators: IOperator[];
 }
@@ -13,8 +14,8 @@ const Home = ({ operators }: IOperatorsADD) => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Терминал оплаты мобильной связи</h1>
-        <p className={styles.description}>Выберите оператора</p>
+        <h1>Терминал оплаты</h1>
+        <h2>Выберите оператора</h2>
 
         <div className={styles.grid}>
           {operators.map((operator) => (

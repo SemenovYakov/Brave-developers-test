@@ -3,6 +3,7 @@ import { NextPageContext } from "next";
 import { IOperator } from "../../components/types";
 import { useRouter } from "next/dist/client/router";
 import {ResultForm} from "../../components/resultForm";
+import styles from "../../styles/Pay.module.css";
 
 interface IOperatorsPay {
   operator: IOperator;
@@ -21,9 +22,11 @@ const Pay = ({ operator }: IOperatorsPay) => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
+    <main className={styles.main}>
       <h1>Пополнение счета {operator.id}</h1>
-      <form onSubmit={(event) => submitForm(event)}>
+      <form onSubmit={(event) => submitForm(event)} className={styles.pay__form}>
+        <h2>Введите номер телефона</h2>
         <input
           placeholder="+7(___)___-__-__"
           type="tel"
@@ -31,16 +34,18 @@ const Pay = ({ operator }: IOperatorsPay) => {
           autoComplete="off"
           pattern="([\+]*[7-8]{1}\s?[\(]*9[0-9]{2}[\)]*\s?\d{3}[-]*\d{2}[-]*\d{2})"
         />
+        <h2>Введите сумму</h2>
         <input min="1" max="1000" id="sum" type="number" name="summa" />
-        <input type="submit" value="Пополнить" />
+        <button type="submit" className={styles.pay__button}>Пополнить</button>
       </form>
       <ResultForm result={result} />
+    </main>
     </div>
   );
 };
 
 Pay.getInitialProps = async ({ query }: NextPageContext) => {
-  const response = await fetch(`http://localhost:4200/operators/${query.id}`);
+  const response = await fetch(`https://brave-developers-test-task.herokuapp.com/operators/${query.id}`);
   const operator: IOperator = await response.json();
   console.log(query);
   return { operator };

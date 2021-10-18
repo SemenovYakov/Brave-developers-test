@@ -1,6 +1,7 @@
 import React, { FormEvent } from "react";
 import { useRouter } from "next/dist/client/router";
 import useInput from "../components/hooks";
+import styles from "../styles/Addoperator.module.css";
 
 
 const AddOperator = () => {
@@ -25,15 +26,19 @@ const AddOperator = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
+
+      
+    <main className={styles.add__operator}>
       <h1>Добавление оператора</h1>
-      <form onSubmit={Submit}>
+      <form onSubmit={Submit} className={styles.add__form}>
         <h2>Название оператора</h2>
         <input type="text" {...name} />
         <h2>Ссылка на изображение</h2>
         <input type="link" pattern="https?:\/\/(www.)?(\w*\W*)*" {...link} />
-        <button type="submit">Добавить</button>
+        <button type="submit" className={styles.add__button}>Добавить</button>
       </form>
+    </main>
     </div>
   );
 };

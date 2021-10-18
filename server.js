@@ -5,7 +5,7 @@ const middlewares = jsonServer.defaults({
     static: './.next',
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
 server.use(middlewares);
 server.use(router);
