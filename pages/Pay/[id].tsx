@@ -28,6 +28,7 @@ const Pay = ({ operator }: IOperatorsPay) => {
       <form onSubmit={(event) => submitForm(event)} className={styles.pay__form}>
         <h2>Введите номер телефона</h2>
         <input
+        required
           placeholder="+7(___)___-__-__"
           type="tel"
           name="tel"
@@ -35,7 +36,7 @@ const Pay = ({ operator }: IOperatorsPay) => {
           pattern="([\+]*[7-8]{1}\s?[\(]*9[0-9]{2}[\)]*\s?\d{3}[-]*\d{2}[-]*\d{2})"
         />
         <h2>Введите сумму</h2>
-        <input min="1" max="1000" id="sum" type="number" name="summa" />
+        <input required min="1" max="1000" id="sum" type="number" name="summa" />
         <button type="submit" className={styles.pay__button}>Пополнить</button>
       </form>
       <ResultForm result={result} />

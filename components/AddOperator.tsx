@@ -33,9 +33,9 @@ const AddOperator = () => {
       <h1>Добавление оператора</h1>
       <form onSubmit={Submit} className={styles.add__form}>
         <h2>Название оператора</h2>
-        <input type="text" {...name} />
+        <input required type="text" {...name} />
         <h2>Ссылка на изображение</h2>
-        <input type="link" pattern="https?:\/\/(www.)?(\w*\W*)*" {...link} />
+        <input  required type="link" pattern="https?:\/\/(www.)?(\w*\W*)*" {...link} />
         <button type="submit" className={styles.add__button}>Добавить</button>
       </form>
     </main>
