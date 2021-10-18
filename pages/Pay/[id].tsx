@@ -4,6 +4,8 @@ import { IOperator } from "../../components/types";
 import { useRouter } from "next/dist/client/router";
 import {ResultForm} from "../../components/resultForm";
 import styles from "../../styles/Pay.module.css";
+import InputMask from 'react-input-mask';
+import useInput from "../../components/hooks";
 
 interface IOperatorsPay {
   operator: IOperator;
@@ -12,6 +14,7 @@ interface IOperatorsPay {
 const Pay = ({ operator }: IOperatorsPay) => {
   const [result, setResult] = useState<boolean>();
   const router = useRouter();
+  const num = useInput('')
 
   const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -27,14 +30,7 @@ const Pay = ({ operator }: IOperatorsPay) => {
       <h1>Пополнение счета {operator.id}</h1>
       <form onSubmit={(event) => submitForm(event)} className={styles.pay__form}>
         <h2>Введите номер телефона</h2>
-        <input
-        required
-          placeholder="+7(___)___-__-__"
-          type="tel"
-          name="tel"
-          autoComplete="off"
-          pattern="([\+]*[7-8]{1}\s?[\(]*9[0-9]{2}[\)]*\s?\d{3}[-]*\d{2}[-]*\d{2})"
-        />
+        <InputMask mask="8(999)999-99-99" maskPlaceholder="_" type="tel" name="tel" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" autoComplete="off" required placeholder="8(999)999-99-99" {...num} />
         <h2>Введите сумму</h2>
         <input required min="1" max="1000" id="sum" type="number" name="summa" />
         <button type="submit" className={styles.pay__button}>Пополнить</button>
