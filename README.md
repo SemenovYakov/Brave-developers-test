@@ -8,13 +8,13 @@ function func(s, a, b)
   let i = s.length - 1;
   let aIndex = -1;
   let bIndex = -1;
-  while (aIndex == -1 && bIndex == -1 && i > 0) 
+  while (aIndex === -1 && bIndex === -1 && i > 0) 
   {
-    if (s[i] == a) 
+    if (s[i] === a) 
     {
       aIndex = i;
     }
-    if (s[i] == b) 
+    if (s[i] === b) 
     {
       bIndex = i;
     }
