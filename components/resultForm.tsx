@@ -1,5 +1,9 @@
 import styles from "../styles/Pay.module.css";
-export const ResultForm = ({ result }: any) => {
+interface IResultForm {
+  result: boolean | undefined
+}
+
+export const ResultForm = ({ result }: IResultForm) => {
   return (
     <>
       {typeof result == "undefined" ? (

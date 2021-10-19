@@ -7,7 +7,7 @@ interface OperatorProps {
   operator: IOperator;
 }
 
-const Operator = ({ operator }: OperatorProps) => {
+export const Operator = ({ operator }: OperatorProps) => {
   const router = useRouter();
 
   return (
@@ -21,6 +21,5 @@ const Operator = ({ operator }: OperatorProps) => {
   );
 };
 
-export default Operator;
 
 

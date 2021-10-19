@@ -4,7 +4,7 @@ import useInput from "../components/hooks";
 import styles from "../styles/Addoperator.module.css";
 
 
-const AddOperator = () => {
+export const AddOperator = () => {
   const router = useRouter();
   const name = useInput("");
   const link = useInput("");
@@ -42,6 +42,5 @@ const AddOperator = () => {
     </div>
   );
 };
-export default AddOperator;
 
 

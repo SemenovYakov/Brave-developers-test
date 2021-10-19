@@ -1,18 +1,30 @@
 import styles from "../styles/Home.module.css";
 import { IOperator } from "../components/types";
 import { useRouter } from "next/dist/client/router";
-import Operator from "../components/Operator";
+import { Operator } from "../components/Operator";
+import styled from "styled-components";
 
 
 interface IOperatorsADD {
   operators: IOperator[];
 }
 
+
+ const Container=styled.div`
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
+  min-height: 100vh;
+  min-width: 100vw;`
+
 const Home = ({ operators }: IOperatorsADD) => {
   const router = useRouter();
 
   return (
-    <div className={styles.container}>
+    <Container>
       <main className={styles.main}>
         <h1>Терминал оплаты</h1>
         <h2>Выберите оператора</h2>
@@ -38,7 +50,7 @@ const Home = ({ operators }: IOperatorsADD) => {
             </a>
         </div>
       </main>
-    </div>
+    </Container>
   );
 };
 
