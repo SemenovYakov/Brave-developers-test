@@ -28,4 +28,4 @@ function func(s, a, b)
   else return -1;
 }
 
-[Приложение](brave-developers-test.vercel.app)
+[Приложение](https://brave-developers-test.vercel.app/)
