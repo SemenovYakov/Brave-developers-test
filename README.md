@@ -28,4 +28,4 @@ function func(s, a, b)
   else return -1;
 }
 
-[Приложение](https://test-task-liart-kappa.vercel.app/)
+[Приложение](brave-developers-test.vercel.app)
