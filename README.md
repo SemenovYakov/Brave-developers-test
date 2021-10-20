@@ -21,7 +21,7 @@ function func(s, a, b)
     i--;
   }
 
-  if (aIndex != -1 || bIndex != -1) 
+  if (aIndex !== -1 || bIndex !== -1) 
   {
     return Math.max(aIndex,bIndex);
   } 
