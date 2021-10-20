@@ -18,4 +18,4 @@ return(s.indexOf('b'))
 else return -1
 }
 
-[Приложение](https://test-task-liart-kappa.vercel.app/)
+[Приложение](https://brave-developers-test.vercel.app/)
