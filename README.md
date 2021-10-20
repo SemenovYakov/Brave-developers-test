@@ -1,31 +1,21 @@
-function func(s, a, b) 
-  {
-  if (s === "") 
-  {
-    return -1;
-  }
-
-  let i = s.length - 1;
-  let aIndex = -1;
-  let bIndex = -1;
-  while (aIndex == -1 && bIndex == -1 && i > 0) 
-  {
-    if (s[i] == a) 
-    {
-      aIndex = i;
-    }
-    if (s[i] == b) 
-    {
-      bIndex = i;
-    }
-    i--;
-  }
-
-  if (aIndex != -1 || bIndex != -1) 
-  {
-    return Math.max(aIndex,bIndex);
-  } 
-  else return -1;
+function func(str,a,b)
+{
+let aIndex = -1 
+let bIndex = -1
+if(str === "")
+{
+return -1
+}
+let s = (str.split("").reverse().join("")) 
+if(s.indexOf('a')>s.indexOf('b'))
+{
+return(s.indexOf('a'))
+}
+else if(s.indexOf('a')<s.indexOf('b'))
+{
+return(s.indexOf('b'))
+}
+else return -1
 }
 
 [Приложение](https://test-task-liart-kappa.vercel.app/)

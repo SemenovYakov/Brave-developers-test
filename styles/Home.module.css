@@ -1,18 +1,9 @@
-.container,.main {
+
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.container {
-  background-color: #000000;
-  background-size: 0.375em 0.375em, 0.375em 0.375em, 100% 100%;
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
-.main {
   position: relative;
   background-color:#0e0e0e ;
   max-width: 1000px;
