@@ -3,9 +3,9 @@ import { NextPageContext } from "next";
 import { IOperator } from "../../components/types";
 import { useRouter } from "next/dist/client/router";
 import {ResultForm} from "../../components/resultForm";
-import styles from "../../styles/Pay.module.css";
 import InputMask from 'react-input-mask';
 import useInput from "../../components/hooks";
+import{PayMain,PayContainer,PayButton,PayTitle,PayForm,PayH2} from "../../styles/myStyles"
 
 interface IOperatorsPay {
   operator: IOperator;
@@ -25,19 +25,19 @@ const Pay = ({ operator }: IOperatorsPay) => {
   };
 
   return (
-    <div className={styles.container}>
-    <main className={styles.main}>
-      <h1>Пополнение счета {operator.id}</h1>
-      <form onSubmit={(event) => submitForm(event)} className={styles.pay__form}>
-        <h2>Введите номер телефона</h2>
+    <PayContainer>
+    <PayMain>
+      <PayTitle>Пополнение счета {operator.id}</PayTitle>
+      <PayForm onSubmit={(event) => submitForm(event)}>
+        <PayH2>Введите номер телефона</PayH2>
         <InputMask mask="8(999)999-99-99" maskPlaceholder="_" type="tel" name="tel" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" autoComplete="off" required placeholder="8(999)999-99-99" {...num} />
-        <h2>Введите сумму</h2>
+        <PayH2>Введите сумму</PayH2>
         <input required min="1" max="1000" id="sum" type="number" name="summa" />
-        <button type="submit" className={styles.pay__button}>Пополнить</button>
-      </form>
+        <PayButton type="submit">Пополнить</PayButton>
+      </PayForm>
       <ResultForm result={result} />
-    </main>
-    </div>
+    </PayMain>
+    </PayContainer>
   );
 };
 

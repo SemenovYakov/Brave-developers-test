@@ -1,4 +1,5 @@
-import styles from "../styles/Pay.module.css";
+import {PayTrue, PayFalse} from "../styles/myStyles"
+
 interface IResultForm {
   result: boolean | undefined
 }
@@ -12,11 +13,11 @@ export const ResultForm = ({ result }: IResultForm) => {
         <>
           {result ? (
             <>
-              <span className={styles.pay__true}>Операция оплаты прошла успешно!</span>
+              <PayTrue>Операция оплаты прошла успешно!</PayTrue>
             </>
           ) : (
             <>
-              <span className={styles.pay__false}>Операция оплаты завершилась с ошибкой!</span>
+              <PayFalse>Операция оплаты завершилась с ошибкой!</PayFalse>
             </>
           )}
         </>
